@@ -9,7 +9,7 @@ module.exports = {
 			.setURL('https://discord.js.org/')
 			.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
 			.setDescription('Some description here')
-			.setThumbnail('https://i.imgur.com/wSTFkRM.png')
+			.setThumbnail('icon.png')//.setThumbnail('https://i.imgur.com/wSTFkRM.png')
 			.addField('Regular field title', 'Some value here')
 			.addBlankField()
 			.addField('Inline field title', 'Some value here', true)
