@@ -12,14 +12,14 @@ module.exports = {
 
 				const canvas = createCanvas(500, 500);
 				const ctx = canvas.getContext('2d');
-				ctx.font = '24px "Handwritten"'
+				ctx.font = '64px "Handwritten"'
 				const background = await Canvas.loadImage('commands/images/kill.jpg');
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-				ctx.fillText('Down ' + member.displayName, 250, 10)
+				ctx.fillText('Down ' + member.displayName, canvas.width / 4, canvas.height / 3)
 
 				const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-				ctx.drawImage(avatar, 25, 0, 200, canvas.height);
+				ctx.drawImage(avatar, 25, 0, 200, 25);
 
 				const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
