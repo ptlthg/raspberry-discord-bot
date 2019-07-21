@@ -21,6 +21,7 @@ module.exports = {
 				console.log(ctx.measureText(member.displayName.toUpperCase()).width + (ctx.measureText(member.displayName.toUpperCase()).width / 2))
 				console.log(canvas.width + ',' + canvas.height)
 				const textWidth = ctx.measureText(member.displayName.toUpperCase()).width
+				console.log(textWidth)
 				if (textWidth > canvas.width - 50) {
 					var fontsize = 128;
 					do {
