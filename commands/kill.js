@@ -10,11 +10,12 @@ module.exports = {
 				const { registerFont, createCanvas } = require('canvas');
 				registerFont('commands/fonts/Font-On-A-Stick.ttf', { family: 'Handwritten' });
 
-				const canvas = createCanvas(500, 500);
+				const background = await Canvas.loadImage('commands/images/kill.jpg');
+				const canvas = createCanvas(background.width, background.height);
 				const ctx = canvas.getContext('2d');
+
 				ctx.font = '64px "Handwritten"';
 				ctx.strokeStyle = '#6b0c19';
-				const background = await Canvas.loadImage('commands/images/kill.jpg');
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 				if (ctx.measureText(member.displayName.toUpperCase()).width > canvas.width - 50) {
