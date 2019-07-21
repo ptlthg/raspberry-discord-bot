@@ -22,7 +22,8 @@ module.exports = {
 					do {
 						fontsize--;
 						ctx.font=fontsize + 'px ' + 'Handwritten';
-					} while (ctx.measureText(member.displayName.toUpperCase()).width > canvas.width - 50)
+					} while (ctx.measureText(member.displayName.toUpperCase()).width > canvas.width - 50 && fontsize >= 8)
+					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 25, canvas.height / 4)
 				} else {
 					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 25, canvas.height / 4)
 				};
