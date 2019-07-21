@@ -14,7 +14,7 @@ module.exports = {
 				const canvas = createCanvas(background.width, background.height);
 				const ctx = canvas.getContext('2d');
 
-				ctx.font = '64px "Handwritten"';
+				ctx.font = '128px "Handwritten"';
 				ctx.strokeStyle = '#6b0c19';
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -24,9 +24,9 @@ module.exports = {
 						fontsize--;
 						ctx.font=fontsize + 'px ' + 'Handwritten';
 					} while (ctx.measureText(member.displayName.toUpperCase()).width > canvas.width - 50 && fontsize >= 8)
-					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 25, canvas.height / 4)
+					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
 				} else {
-					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 25, canvas.height / 4)
+					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
 				};
 
 				//const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
