@@ -17,7 +17,15 @@ module.exports = {
 				const background = await Canvas.loadImage('commands/images/kill.jpg');
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-				ctx.fillText('DOWN ' + member.displayName.toUpperCase(), canvas.width / 5, canvas.height / 4)
+				if (ctx.measureText(member.displayName.toUpperCase()).width > canvas.width - 50) {
+					var fontsize = 64;
+					do {
+						fontsize--;
+						ctx.font=fontsize + 'px ' + 'Handwritten';
+					} while (ctx.measureText(member.displayName.toUpperCase()).width > canvas.width - 50)
+				} else {
+					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 25, canvas.height / 4)
+				};
 
 				//const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
 				//ctx.drawImage(avatar, 25, 0, 200, 200);
