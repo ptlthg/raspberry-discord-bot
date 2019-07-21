@@ -3,6 +3,9 @@
 config.json
 log.txt
 
+# Node_modules #
+node_modules
+
 # Compiled source #
 ###################
 *.com
