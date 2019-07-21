@@ -26,9 +26,11 @@ module.exports = {
 					do {
 						fontsize = fontsize - 1;
 						ctx.font = fontsize + 'px "Handwritten"';
-						console.log(fontsize)
+						console.log(textWidth)
 						console.log(canvas.width - 100)
 					} while (textWidth > (canvas.width - 100));
+					console.log(textWidth)
+					console.log(canvas.width - 100)
 					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
 				} else {
 					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
