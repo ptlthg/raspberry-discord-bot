@@ -20,7 +20,7 @@ module.exports = {
 				// Use helpful Attachment class structure to process the file for you
 				const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
-				channel.send(`Down ${member}!`, attachment);
+				message.channel.send(`Down ${member}!`, attachment);
 				message.channel.send('Oh boy! Here I go killing again!')
 			}
 			kill()
