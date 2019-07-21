@@ -19,7 +19,7 @@ module.exports = {
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 				console.log(ctx.measureText(member.displayName.toUpperCase()).width + (ctx.measureText(member.displayName.toUpperCase()).width / 2))
-				console.log(canvas.width + canvas.height)
+				console.log(canvas.width + ',' + canvas.height)
 				if ((ctx.measureText(member.displayName.toUpperCase()).width + (ctx.measureText(member.displayName.toUpperCase()).width / 2)) > canvas.width - 50) {
 					var fontsize = 128;
 					do {
