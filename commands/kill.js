@@ -19,7 +19,7 @@ module.exports = {
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 				if (ctx.measureText(member.displayName.toUpperCase()).width > canvas.width - 50) {
-					var fontsize = 64;
+					var fontsize = 128;
 					do {
 						fontsize--;
 						ctx.font=fontsize + 'px ' + 'Handwritten';
