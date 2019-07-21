@@ -19,19 +19,19 @@ module.exports = {
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 				console.log(ctx.measureText(member.displayName.toUpperCase()).width + (ctx.measureText(member.displayName.toUpperCase()).width / 2))
-				console.log(canvas.width + ',' + canvas.height)
+				console.log(background.width + ',' + background.height)
 				const textWidth = ctx.measureText(member.displayName.toUpperCase()).width
 				console.log(textWidth)
-				if (textWidth > canvas.width - 50) {
+				if (textWidth > background.width - 50) {
 					var fontsize = 128;
 					do {
 						fontsize = fontsize - 1;
 						ctx.font = fontsize + 'px "Handwritten"';
 						console.log(textWidth)
-						console.log(canvas.width - 100)
-					} while (textWidth > (canvas.width - 100));
+						console.log(background.width - 100)
+					} while (textWidth > (background.width - 100));
 					console.log(textWidth)
-					console.log(canvas.width - 100)
+					console.log(background.width - 100)
 					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
 				} else {
 					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
