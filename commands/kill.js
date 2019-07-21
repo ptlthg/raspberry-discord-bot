@@ -20,12 +20,13 @@ module.exports = {
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 				console.log(ctx.measureText(member.displayName.toUpperCase()).width + (ctx.measureText(member.displayName.toUpperCase()).width / 2))
 				console.log(canvas.width + ',' + canvas.height)
-				if ((ctx.measureText(member.displayName.toUpperCase()).width + (ctx.measureText(member.displayName.toUpperCase()).width / 2)) > canvas.width - 50) {
+				const textWidth = ctx.measureText(member.displayName.toUpperCase()).width
+				if (textWidth > canvas.width - 50) {
 					var fontsize = 128;
 					do {
-						fontsize--;
-						ctx.font=fontsize + 'px ' + 'Handwritten';
-					} while (ctx.measureText(member.displayName.toUpperCase()).width > 905);
+						fontsize = fontsize - 1;
+						ctx.font = fontsize + 'px ' + 'Handwritten';
+					} while (textWidth > canvas.width - 100);
 					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
 				} else {
 					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
