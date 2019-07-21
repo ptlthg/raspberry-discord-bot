@@ -16,7 +16,7 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
-client.on('message', message => {
+client.on('message', async message => {
   var logger = fs.createWriteStream('log.txt', {
   	flags: 'a'
   });
