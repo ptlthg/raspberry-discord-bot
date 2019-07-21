@@ -8,16 +8,16 @@ module.exports = {
 		if (member !== undefined) {
 			async function kill() {
 				const { registerFont, createCanvas } = require('canvas');
-				registerFont('commands/fonts/Font-On-A-Stick.ttf', { family: 'Handwritten' });
+				//registerFont('commands/fonts/Font-On-A-Stick.ttf', { family: 'Handwritten' });
 
 				const canvas = createCanvas(500, 500);
 				const ctx = canvas.getContext('2d');
-				ctx.font = '12px "Handwritten"'
+				//ctx.font = '12px "Handwritten"'
 				ctx.fillText('Down ' + member.displayName, 250, 10)
 				const background = await Canvas.loadImage('commands/images/kill.jpg');
-				// This uses the canvas dimensions to stretch the image onto the entire canvas
+
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-				// Use helpful Attachment class structure to process the file for you
+
 				const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
 				message.channel.send(`Down ${member}!`, attachment);
