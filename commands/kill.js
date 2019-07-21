@@ -17,7 +17,10 @@ module.exports = {
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 				ctx.fillText('Down ' + member.displayName, 250, 10)
-				
+
+				const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
+				ctx.drawImage(avatar, 25, 0, 200, canvas.height);
+
 				const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
 				message.channel.send(`Down ${member}!`, attachment);
