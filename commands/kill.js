@@ -17,10 +17,10 @@ module.exports = {
 				const background = await Canvas.loadImage('commands/images/kill.jpg');
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-				ctx.fillText('Down ' + member.displayName, canvas.width / 5, canvas.height / 4)
+				ctx.fillText('DOWN ' + member.displayName.toUppercase(), canvas.width / 5, canvas.height / 4)
 
-				const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-				ctx.drawImage(avatar, 25, 0, 200, 200);
+				//const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
+				//ctx.drawImage(avatar, 25, 0, 200, 200);
 
 				const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
