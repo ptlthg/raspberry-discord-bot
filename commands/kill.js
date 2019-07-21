@@ -13,11 +13,11 @@ module.exports = {
 				const canvas = createCanvas(500, 500);
 				const ctx = canvas.getContext('2d');
 				//ctx.font = '12px "Handwritten"'
-				ctx.fillText('Down ' + member.displayName, 250, 10)
 				const background = await Canvas.loadImage('commands/images/kill.jpg');
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-
+				ctx.fillText('Down ' + member.displayName, 250, 10)
+				
 				const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
 				message.channel.send(`Down ${member}!`, attachment);
