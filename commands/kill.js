@@ -1,4 +1,5 @@
 const Canvas = require('canvas');
+const Discord = require('discord.js');
 module.exports = {
 	name: 'kill',
 	description: 'Kill a user',
