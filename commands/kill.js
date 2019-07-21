@@ -12,7 +12,7 @@ module.exports = {
 			const ctx = canvas.getContext('2d');
 			ctx.font = '12px "Handwritten"'
 			ctx.fillText('Down ' + member.displayName, 250, 10)
-			const background = await Canvas.loadImage('../images/kill.jpg');
+			const background = Canvas.loadImage('../images/kill.jpg');
 			// This uses the canvas dimensions to stretch the image onto the entire canvas
 			ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 			// Use helpful Attachment class structure to process the file for you
