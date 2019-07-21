@@ -8,11 +8,11 @@ module.exports = {
 		if (member !== undefined) {
 			async function kill() {
 				const { registerFont, createCanvas } = require('canvas');
-				//registerFont('commands/fonts/Font-On-A-Stick.ttf', { family: 'Handwritten' });
+				registerFont('commands/fonts/Font-On-A-Stick.ttf', { family: 'Handwritten' });
 
 				const canvas = createCanvas(500, 500);
 				const ctx = canvas.getContext('2d');
-				//ctx.font = '12px "Handwritten"'
+				ctx.font = '24px "Handwritten"'
 				const background = await Canvas.loadImage('commands/images/kill.jpg');
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
