@@ -3,6 +3,9 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'kill',
 	description: 'Kill a user',
+	args: true,
+	usage: '<user> or any name',
+	guildOnly: false,
 	execute(message, args) {
 		var member = message.mentions.members.first();
 		if (member !== undefined) {

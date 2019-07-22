@@ -3,12 +3,15 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'no',
 	description: 'Chuck \"no\" at someone.',
+	args: true,
+	usage: '<user>',
+	guildOnly: false,
 	execute(message, args) {
 		var member = message.mentions.members.first();
 		if (member !== undefined) {
 			kill(member, true)
 		} else {
-			message.channel.send('No user specified, going to kill everyone in their sleep now, thanks ' + message.member.displayName + '!')
+			message.channel.send('No user specified, going to say no to everyone in their sleep now, thanks ' + message.member.displayName + '!')
 		}
 		async function kill(victim, state) {
 			member = victim;

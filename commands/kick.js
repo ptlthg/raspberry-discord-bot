@@ -1,6 +1,9 @@
 module.exports = {
 	name: 'kick',
 	description: 'Kick someone you don\'t like.',
+	args: true,
+	usage: '<user>',
+	guildOnly: true,
 	execute(message, args) {
 		if (message.member.hasPermission('KICK_MEMBERS')) {
 	    let member = message.mentions.members.first();
