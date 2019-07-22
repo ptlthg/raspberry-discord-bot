@@ -45,6 +45,7 @@ module.exports = {
 							name = name + args[i] + ' ';
 						};
 					};
+					name = name.slice(0, -1);
 					name = name.toUpperCase();
 					var nameWidth = ctx.measureText(name).width;
 					function fitText(text, size, fontface, fontsize, xPos, yPos) {
