@@ -7,7 +7,7 @@ module.exports = {
 		var member = message.mentions.members.first();
 		if (member !== undefined) {
 			kill(member, true)
-		} else if (args !== undefined) {
+		} else if (args !== undefined && args !== '') {
 			kill(args, false)
 		} else {
 			message.channel.send('No user specified, going to kill everyone in their sleep now, thanks ' + message.member.displayName + '!')
@@ -56,6 +56,9 @@ module.exports = {
 				ctx.textAlign = 'center';
 				ctx.fillText(name, canvas.width * 0.75, canvas.height / 1.6)
 			}
+
+			//const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
+			//ctx.drawImage(avatar, 25, 0, 200, 200);
 
 			const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
