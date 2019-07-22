@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 module.exports = {
-	name: 'test',
-	description: 'test command',
+	name: 'raspberry',
+	description: 'Raspberry',
 	execute(message, args) {
 		const raspberry = new Discord.RichEmbed()
 			.setColor('red')
