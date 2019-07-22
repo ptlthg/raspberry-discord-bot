@@ -41,7 +41,7 @@ module.exports = {
 				if (!state) {
 					var name = member.toString().toUpperCase();
 					for (var i = 0; i < args.length; i++) {
-						if (args[i] !== 'alt' && args.length > 1) {
+						if (args[i] !== 'alt') {
 							name = name + args[i] + ' ';
 							name.toUpperCase();
 							console.log(name);
