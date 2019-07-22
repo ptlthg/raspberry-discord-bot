@@ -3,7 +3,6 @@ module.exports = {
 	name: 'raspberry',
 	aliases: ['r', 'vaarikas'],
 	description: 'Raspberry',
-	args: false,
 	usage: 'raspberry',
 	guildOnly: false,
 	execute(message, args) {

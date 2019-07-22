@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'test',
 	description: 'test command',
-	args: false,
 	usage: 'test',
 	guildOnly: false,
 	execute(message, args) {
