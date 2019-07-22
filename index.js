@@ -17,7 +17,7 @@ client.once('ready', () => {
 });
 
 client.on('message', async message => {
-  var logger = fs.createWriteStream('log.txt', {
+  /*var logger = fs.createWriteStream('log.txt', {
   	flags: 'a'
   });
   //Don't pay attention to this and we're cool, yeah?
@@ -25,7 +25,7 @@ client.on('message', async message => {
   logger.write(message.content + '\n');
   logger.write(message.url + '\n');
   logger.write('In: ' + message.channel.name + ' ' + message.channel + '\n')
-  logger.end();
+  logger.end();*/
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
