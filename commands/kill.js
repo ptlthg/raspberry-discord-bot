@@ -26,7 +26,7 @@ module.exports = {
 			var canvas;
 
 			var random = Math.random();
-			if (random < 1) { //Change to 0.1
+			if (random < 0.1) { 
 				proceed = false
 
 				const background = await Canvas.loadImage('commands/images/killagain.jpg');
@@ -56,14 +56,14 @@ module.exports = {
 				} else {
 					ctx.beginPath();
 					//Draws circle
-					ctx.arc(canvas.width / 2 + 155, canvas.height / 2 + 125, 125, 0, Math.PI * 2, true);
+					ctx.arc(canvas.width / 2 + 155, canvas.height / 2 + 115, 125, 0, Math.PI * 2, true);
 					ctx.closePath();
 					//Uses circle as cookie cutter
 					ctx.clip();
 
 					const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
 					//Draws pfp
-					ctx.drawImage(avatar, canvas.width / 2 + 30, canvas.height / 2, 250, 250);
+					ctx.drawImage(avatar, canvas.width / 2 + 30, canvas.height / 2 - 10, 250, 250);
 				};
 			};
 
