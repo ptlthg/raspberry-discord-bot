@@ -8,6 +8,7 @@ module.exports = {
 		if (member !== undefined) {
 			kill(member, true)
 		} else if (args !== undefined) {
+			console.log(args)
 			kill(args, false)
 		} else {
 			message.channel.send('No user specified, going to kill everyone in their sleep now, thanks ' + message.member.displayName + '!')
