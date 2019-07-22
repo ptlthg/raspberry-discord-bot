@@ -23,13 +23,14 @@ module.exports = {
 
 			const { registerFont, createCanvas } = require('canvas');
 			registerFont('commands/fonts/Font-On-A-Stick.ttf', { family: 'Handwritten' });
+			var canvas;
 
 			var random = Math.random();
 			if (random < 1) { //Change to 0.1
 				proceed = false
 
 				const background = await Canvas.loadImage('commands/images/killagain.jpg');
-				const canvas = createCanvas(background.width, background.height);
+				canvas = createCanvas(background.width, background.height);
 				const ctx = canvas.getContext('2d');
 
 				ctx.font = '128px "Handwritten"';
@@ -67,7 +68,7 @@ module.exports = {
 
 			if (proceed == true) {
 				const background = await Canvas.loadImage('commands/images/kill.jpg');
-				const canvas = createCanvas(background.width, background.height);
+				canvas = createCanvas(background.width, background.height);
 				const ctx = canvas.getContext('2d');
 
 				ctx.font = '128px "Handwritten"';
