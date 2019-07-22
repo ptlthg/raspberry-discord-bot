@@ -49,9 +49,11 @@ module.exports = {
 			};
 			if (nameWidth > (canvas.width / 2 - 50)) {
 				ctx.font = '64px "Handwritten"';
+				ctx.textAlign = 'center';
 				fitText(name, 'Handwritten', 64, canvas.width / 2 + 25, canvas.height / 1.6);
 			} else {
 				ctx.font = '64px "Handwritten"';
+				ctx.textAlign = 'center';
 				ctx.fillText(name, canvas.width / 2 + 25, canvas.height / 1.6)
 			}
 
