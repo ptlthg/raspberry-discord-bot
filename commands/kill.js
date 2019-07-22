@@ -25,7 +25,7 @@ module.exports = {
 			registerFont('commands/fonts/Font-On-A-Stick.ttf', { family: 'Handwritten' });
 
 			if (state) {
-				let victims = JSON.parse(fs.readFileSync('commands/victims.json', 'utf8'));
+				let victims = JSON.parse(fs.readFile('commands/victims.json', 'utf8'));
 				if (!victim[member.id]) victims[member.id] = {
 					killed: 0,
 				};
