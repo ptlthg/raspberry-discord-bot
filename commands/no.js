@@ -5,7 +5,7 @@ module.exports = {
 	description: 'Chuck \"no\" at someone.',
 	args: true,
 	usage: '<user>',
-	guildOnly: false,
+	guildOnly: true,
 	execute(message, args) {
 		var member = message.mentions.members.first();
 		if (member !== undefined) {
@@ -56,7 +56,6 @@ module.exports = {
 
 			const newEmbed = new Discord.RichEmbed()
 				.setColor('#6b0c19')
-				.setAuthor('Oh boy! Here I go killing again!')
 				.attachFiles([attachment])
 				.setImage('attachment://kill.png')
 				.setTimestamp()

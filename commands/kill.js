@@ -5,7 +5,7 @@ module.exports = {
 	description: 'Kill a user',
 	args: true,
 	usage: '<user> or any name',
-	guildOnly: false,
+	guildOnly: true,
 	execute(message, args) {
 		var member = message.mentions.members.first();
 		if (member !== undefined) {
