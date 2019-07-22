@@ -60,7 +60,7 @@ module.exports = {
 					ctx.clip();
 
 					const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-					ctx.drawImage(avatar, canvas.width / 2 + 50, canvas.height / 2, 200, 200);
+					ctx.drawImage(avatar, canvas.width / 2 + 55, canvas.height / 2, 250, 250);
 				};
 			};
 
