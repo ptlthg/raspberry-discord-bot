@@ -6,7 +6,7 @@ module.exports = {
 		const raspberry = new Discord.RichEmbed()
 			.setColor('red')
 			.setAuthor('Raspberry')
-			.attachFiles(['/commands/images/icon.png'])
+			.attachFiles(['commands/images/icon.png'])
 			.setImage('attachment://icon.png')
 			.setTimestamp()
 			.setFooter('Raspberry');
