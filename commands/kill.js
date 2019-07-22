@@ -6,7 +6,7 @@ module.exports = {
 	aliases: ['k', 'murder', 'stab', 'shank', 'stan'],
 	description: 'Kill a user',
 	args: true,
-	usage: '<user> or any name',
+	usage: '(alt) <user> or any name',
 	guildOnly: true,
 	execute(message, args) {
 		var member = message.mentions.members.first();
@@ -45,7 +45,6 @@ module.exports = {
 							name = name + args[i] + ' ';
 						};
 					};
-					name = member.toString().toUpperCase();
 					var nameWidth = ctx.measureText(name).width;
 					function fitText(text, size, fontface, fontsize, xPos, yPos) {
 						do {
