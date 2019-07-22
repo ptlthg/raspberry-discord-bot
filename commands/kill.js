@@ -63,7 +63,7 @@ module.exports = {
 
 					const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
 					//Draws pfp
-					ctx.drawImage(avatar, canvas.width / 2 + 25, canvas.height / 2, 250, 250);
+					ctx.drawImage(avatar, canvas.width / 2 + 30, canvas.height / 2, 250, 250);
 				};
 			};
 
