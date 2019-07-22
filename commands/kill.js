@@ -13,7 +13,7 @@ module.exports = {
 			message.channel.send('No user specified, going to kill everyone in their sleep now, thanks ' + message.member.displayName + '!')
 		}
 		async function kill(victim, state) {
-			member = victim
+			member = victim;
 
 			const { registerFont, createCanvas } = require('canvas');
 			registerFont('commands/fonts/Font-On-A-Stick.ttf', { family: 'Handwritten' });
