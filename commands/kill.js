@@ -105,7 +105,7 @@ module.exports = {
 				} else {
 					ctx.fillText('DOWN ' + name, 50, canvas.height / 4);
 				};
-				ctx.font = '64px 'Handwritten'';
+				ctx.font = '64px "Handwritten"';
 				ctx.textAlign = 'center';
 				ctx.fillStyle = '#02a166';
 				if (nameWidth > (canvas.width / 2 - 50)) {
