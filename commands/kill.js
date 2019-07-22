@@ -29,7 +29,7 @@ module.exports = {
 			if (state) {
 				var name = member.displayName.toUpperCase();
 			} else {
-				var name = member.toUpperCase()
+				var name = member.toString().toUpperCase();
 			}
 			var textWidth = ctx.measureText(name).width
 
