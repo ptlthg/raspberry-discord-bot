@@ -42,12 +42,12 @@ module.exports = {
 			};
 
 			ctx.beginPath();
-			ctx.arc(125, 125, 100, 0, Math.PI * 2, true);
+			ctx.arc(canvas.width - 100, 0, 100, 0, Math.PI * 2, true);
 			ctx.closePath();
 			ctx.clip();
 
 			const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-			ctx.drawImage(avatar, 25, 25, 200, 200);
+			ctx.drawImage(avatar, canvas.width - 100, 0, 200, 200);
 
 			const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
