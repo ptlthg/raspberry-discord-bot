@@ -36,9 +36,9 @@ module.exports = {
 				ctx.fillText(text, xPos, yPos);
 			}
 			if (noWidth > canvas.width - 100) {
-				fitText(name + ' NO', canvas.width / 1.5 - 100, 'Handwritten', 128, 30, canvas.height / 2);
+				fitText(name + ' NO', canvas.width / 1.5 - 100, 'Handwritten', 128, 30, canvas.height / 4);
 			} else {
-				ctx.fillText(name + ' NO', 50, canvas.height / 8);
+				ctx.fillText(name + ' NO', 30, canvas.height / 4);
 			};
 
 			ctx.beginPath();
