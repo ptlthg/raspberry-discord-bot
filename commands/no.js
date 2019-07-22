@@ -46,11 +46,6 @@ module.exports = {
 			ctx.closePath();
 			ctx.clip();
 
-			ctx.beginPath();
-			ctx.rect(canvas.width - 100, -100, 100, 100);
-			ctx.closePath();
-			ctx.clip();
-
 			const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
 			ctx.drawImage(avatar, canvas.width - 100, -100, 200, 200);
 
