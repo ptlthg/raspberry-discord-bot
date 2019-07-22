@@ -18,21 +18,18 @@ module.exports = {
 				ctx.fillStyle = '#6b0c19';
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-				console.log(ctx.measureText(member.displayName.toUpperCase()).width + (ctx.measureText(member.displayName.toUpperCase()).width / 2))
-				console.log(background.width + ',' + background.height)
-				const textWidth = ctx.measureText(member.displayName.toUpperCase()).width
-				console.log(textWidth)
-				if (textWidth > background.width - 50) {
+				var textWidth = ctx.measureText(member.displayName.toUpperCase()).width
+
+				function fitText(text, fontface) {
 					var fontsize = 128;
 					do {
-						fontsize = fontsize - 1;
-						ctx.font = fontsize + 'px "Handwritten"';
-						console.log(textWidth)
-						console.log(background.width - 100)
-					} while (textWidth > (background.width - 100));
-					console.log(textWidth)
-					console.log(background.width - 100)
-					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
+						fontsize--;
+						ctx.font = fontsize + 'px ' + fontface;
+					} while (ctx.measureText(text).width > canvas.width - 100)
+					ctx.fillText(text, 50, canvas.height /4)
+				}
+				if (textWidth > canvas.width - 100) {
+					fitText('DOWN ' + member.displayName.toUpperCase(), 'Handwritten')
 				} else {
 					ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
 				};
