@@ -39,7 +39,7 @@ module.exports = {
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
 				if (!state) {
-					var name = member.toUpperCase();
+					var name = member.toString().toUpperCase();
 					var nameWidth = ctx.measureText(name).width;
 					function fitText(text, size, fontface, fontsize, xPos, yPos) {
 						do {
@@ -63,8 +63,6 @@ module.exports = {
 					ctx.drawImage(avatar, canvas.width / 2 + 50, canvas.height / 2, 200, 200);
 				};
 			};
-
-
 
 			if (proceed == true) {
 				const background = await Canvas.loadImage('commands/images/kill.jpg');
