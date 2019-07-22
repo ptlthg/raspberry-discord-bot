@@ -29,9 +29,7 @@ module.exports = {
 			}
 
 			if (args[0] !== undefined) {
-				const name = args[0].toLowerCase().catch(error => {
-					console.log('Help')
-				});
+				const name = args[0].toLowerCase();
 				const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
 
 				if (!command) {
