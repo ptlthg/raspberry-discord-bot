@@ -10,7 +10,7 @@ module.exports = {
 			const { commands } = message.client;
 			//const helpMenu = new Discord.RichEmbed()
 			if (!args.length) {
-				helpMenu.title('Here\'s a list of all the commands:')
+				//helpMenu.title('Here\'s a list of all the commands:')
 
 				data.push('Here\'s a list of all the commands:');
 				data.push(commands.map(command => command.name).join(', '));
