@@ -35,8 +35,7 @@ module.exports = {
 			var downWidth = ctx.measureText('DOWN ' + name).width;
 			var nameWidth = ctx.measureText(name).width;
 
-			function fitText(text, fontface, xPos, yPos) {
-				var fontsize = 128;
+			function fitText(text, fontface, fontsize, xPos, yPos) {
 				do {
 					fontsize--;
 					ctx.font = fontsize + 'px ' + fontface;
@@ -44,12 +43,12 @@ module.exports = {
 				ctx.fillText(text, xPos, yPos);
 			}
 			if (downWidth > canvas.width - 100) {
-				fitText('DOWN ' + name, 'Handwritten', 50, canvas.height / 4);
+				fitText('DOWN ' + name, 'Handwritten', 128, 50, canvas.height / 4);
 			} else {
 				ctx.fillText('DOWN ' + name, 50, canvas.height / 4);
 			};
 			if (nameWidth > (canvas.width / 2 - 50)) {
-				fitText(name, 'Handwritten', canvas.width / 2 + 25, canvas.height / 1.5);
+				fitText(name, 'Handwritten', 64, canvas.width / 2 + 25, canvas.height / 1.5);
 			} else {
 				ctx.fillText(name, canvas.width / 2 + 25, canvas.height / 1.5)
 			}
