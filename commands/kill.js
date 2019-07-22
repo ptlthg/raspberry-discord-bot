@@ -26,7 +26,7 @@ module.exports = {
 			var canvas;
 
 			var random = Math.random();
-			if (random < 0.2) {
+			if (random < 0.15 || args[0] === 'alt') {
 				proceed = false
 
 				const background = await Canvas.loadImage('commands/images/killagain.jpg');
@@ -39,7 +39,13 @@ module.exports = {
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
 				if (!state) {
-					var name = member.toString().toUpperCase();
+					var name;
+					for (var i = 0; i < args.length; i++) {
+						if (args[i] !== 'alt') {
+							name = name + args[i] + ' ';
+						};
+					};
+					name = member.toString().toUpperCase();
 					var nameWidth = ctx.measureText(name).width;
 					function fitText(text, size, fontface, fontsize, xPos, yPos) {
 						do {
