@@ -39,7 +39,7 @@ module.exports = {
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
 				if (!state) {
-					var name = member.displayName.toUpperCase();
+					var name = member.toUpperCase();
 					var nameWidth = ctx.measureText(name).width;
 					function fitText(text, size, fontface, fontsize, xPos, yPos) {
 						do {
