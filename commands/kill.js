@@ -39,10 +39,27 @@ module.exports = {
 
 				const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
-				const embed = new Discord.RichEmbed()
-					embed.setImage(attachment)
-					embed.setFooter('Oh boy! Here I go killing again!')
-				message.channel.send(embed)
+				//const embed = new Discord.RichEmbed()
+				//	embed.setImage(attachment)
+				//	embed.setFooter('Oh boy! Here I go killing again!')
+				const exampleEmbed = new Discord.RichEmbed()
+					.setColor('#0099ff')
+					.setTitle('Some title')
+					.setURL('https://discord.js.org/')
+					.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+					.setDescription('Some description here')
+					.setThumbnail('https://i.imgur.com/wSTFkRM.png')
+					.addField('Regular field title', 'Some value here')
+					.addBlankField()
+					.addField('Inline field title', 'Some value here', true)
+					.addField('Inline field title', 'Some value here', true)
+					.addField('Inline field title', 'Some value here', true)
+					.setImage('https://i.imgur.com/wSTFkRM.png')
+					.setTimestamp()
+					.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+
+				message.channel.send(exampleEmbed);
+				//message.channel.send(embed)
 			}
 			kill()
 		} else {
