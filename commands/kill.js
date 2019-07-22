@@ -40,8 +40,8 @@ module.exports = {
 				const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
 				const embed = new Discord.RichEmbed()
-					.setImage(attachment)
-					.setFooter('Oh boy! Here I go killing again!')
+					embed.setImage(attachment)
+					embed.setFooter('Oh boy! Here I go killing again!')
 				message.channel.send(embed)
 			}
 			kill()
