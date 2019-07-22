@@ -42,7 +42,7 @@ module.exports = {
 			};
 
 			ctx.beginPath();
-			ctx.arc(canvas.width - 100, 0, 100, 0, Math.PI * 2, true);
+			ctx.arc(canvas.width, 100, 100, 0, Math.PI * 2, true);
 			ctx.closePath();
 			ctx.clip();
 
