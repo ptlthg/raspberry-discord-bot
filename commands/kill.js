@@ -43,11 +43,9 @@ module.exports = {
 					for (var i = 0; i < args.length; i++) {
 						if (args[i] !== 'alt') {
 							name = name + args[i] + ' ';
-							name.toUpperCase();
-							console.log(name);
 						};
 					};
-					name.toUpperCase();
+					name = name.toUpperCase();
 					var nameWidth = ctx.measureText(name).width;
 					function fitText(text, size, fontface, fontsize, xPos, yPos) {
 						do {
@@ -91,12 +89,10 @@ module.exports = {
 					for (var i = 0; i < args.length; i++) {
 						if (args[i] !== 'alt') {
 							name = name + args[i] + ' ';
-							name.toUpperCase();
-							console.log(name);
 						};
 					};
+					name = name.toUpperCase();
 				};
-
 				var downWidth = ctx.measureText(name + ' DOWN').width;
 				var nameWidth = ctx.measureText(name).width;
 
