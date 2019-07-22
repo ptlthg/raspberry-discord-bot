@@ -39,8 +39,10 @@ module.exports = {
 
 				const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
-				message.channel.send(`Down ${member}!`, attachment);
-				message.channel.send('Oh boy! Here I go killing again!')
+				const embed = new Discord.RichEmbed()
+					.image(attachment)
+					.setFooter('Oh boy! Here I go killing again!')
+				message.channel.send(embed)
 			}
 			kill()
 		} else {
