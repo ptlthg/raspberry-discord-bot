@@ -29,7 +29,7 @@ module.exports = {
 				*/
 			}
 
-			if (args[0] !== null) {
+			if (args[0] !== undefined) {
 				const name = args[0].toLowerCase().catch(error => {
 					console.log('Help')
 				});
