@@ -39,7 +39,7 @@ module.exports = {
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
 				if (!state) {
-					//var name = member.toString().toUpperCase();
+					var name = '';// = member.toString().toUpperCase();
 					for (var i = 0; i < args.length; i++) {
 						if (args[i] !== 'alt') {
 							name = name + args[i] + ' ';
@@ -87,7 +87,14 @@ module.exports = {
 				if (state) {
 					var name = member.displayName.toUpperCase();
 				} else {
-					var name = member.toString().toUpperCase();
+					var name = '';// = member.toString().toUpperCase();
+					for (var i = 0; i < args.length; i++) {
+						if (args[i] !== 'alt') {
+							name = name + args[i] + ' ';
+							name.toUpperCase();
+							console.log(name);
+						};
+					};
 				};
 
 				var downWidth = ctx.measureText(name + ' DOWN').width;
