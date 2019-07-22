@@ -1,6 +1,6 @@
 module.exports = {
-	name: 'kick',
-	description: 'Kick someone you don\'t like.',
+	name: 'ban',
+	description: 'Ban someone you really don\'t like.',
 	args: true,
 	usage: '<user>',
 	guildOnly: true,
@@ -8,8 +8,8 @@ module.exports = {
 		if (message.member.hasPermission('BAN_MEMBERS')) {
 	    let member = message.mentions.members.first();
 	    if (member !== undefined) {
-				member.kick().then((member) => {
-					message.channel.send(member.displayName + ' has been kicked because of reasons')
+				member.ban().then((member) => {
+					message.channel.send(member.displayName + ' has been banned because of reasons')
 				}).catch(() => {
 					message.channel.send('Error')
 				})
