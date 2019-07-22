@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'no',
 	description: 'Chuck \"no\" at someone.',
+	aliases: ['no', 'stop'],
 	args: true,
 	usage: '<user>',
 	guildOnly: true,

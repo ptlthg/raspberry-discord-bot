@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 module.exports = {
 	name: 'raspberry',
+	aliases: ['r', 'vaarikas'],
 	description: 'Raspberry',
 	args: false,
 	usage: 'raspberry',

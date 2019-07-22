@@ -2,6 +2,7 @@ const Canvas = require('canvas');
 const Discord = require('discord.js');
 module.exports = {
 	name: 'kill',
+	aliases: ['k', 'murder', 'stab', 'shank'],
 	description: 'Kill a user',
 	args: true,
 	usage: '<user> or any name',
