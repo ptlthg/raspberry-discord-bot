@@ -35,22 +35,22 @@ module.exports = {
 			var downWidth = ctx.measureText('DOWN ' + name).width;
 			var nameWidth = ctx.measureText(name).width;
 
-			function fitText(text, fontface, fontsize, xPos, yPos) {
+			function fitText(text, size, fontface, fontsize, xPos, yPos) {
 				do {
 					fontsize--;
 					ctx.font = fontsize + 'px ' + fontface;
-				} while (ctx.measureText(text).width > canvas.width - 100);
+				} while (ctx.measureText(text).width > size);
 				ctx.fillText(text, xPos, yPos);
 			}
 			if (downWidth > canvas.width - 100) {
-				fitText('DOWN ' + name, 'Handwritten', 128, 50, canvas.height / 4);
+				fitText('DOWN ' + name, canvas.width - 100, 'Handwritten', 128, 50, canvas.height / 4);
 			} else {
 				ctx.fillText('DOWN ' + name, 50, canvas.height / 4);
 			};
 			if (nameWidth > (canvas.width / 2 - 50)) {
 				ctx.font = '64px "Handwritten"';
 				ctx.textAlign = 'center';
-				fitText(name, 'Handwritten', 64, canvas.width * 0.75, canvas.height / 1.6);
+				fitText(name, canvas.width / 2 - 50, 'Handwritten', 64, canvas.width * 0.75, canvas.height / 1.6);
 			} else {
 				ctx.font = '64px "Handwritten"';
 				ctx.textAlign = 'center';
