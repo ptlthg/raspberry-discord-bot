@@ -6,13 +6,13 @@ module.exports = {
 	execute(message, args) {
 		var member = message.mentions.members.first();
 		if (member !== undefined) {
-			kill(member)
+			kill(member, true)
 		} else if (args !== undefined) {
-			kill(args)
+			kill(args, false)
 		} else {
 			message.channel.send('No user specified, going to kill everyone in their sleep now, thanks ' + message.member.displayName + '!')
 		}
-		async function kill(victim) {
+		async function kill(victim, state) {
 			member = victim
 
 			const { registerFont, createCanvas } = require('canvas');
@@ -26,7 +26,12 @@ module.exports = {
 			ctx.fillStyle = '#6b0c19';
 
 			ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-			var textWidth = ctx.measureText(member.displayName.toUpperCase()).width
+			if (state) {
+				var name = member.displayName.toUpperCase();
+			} else {
+				var name = member.toUpperCase()
+			}
+			var textWidth = ctx.measureText(name).width
 
 			function fitText(text, fontface) {
 				var fontsize = 128;
@@ -37,9 +42,9 @@ module.exports = {
 				ctx.fillText(text, 50, canvas.height /4)
 			}
 			if (textWidth > canvas.width - 100) {
-				fitText('DOWN ' + member.displayName.toUpperCase(), 'Handwritten')
+				fitText('DOWN ' + name, 'Handwritten')
 			} else {
-				ctx.fillText('DOWN ' + member.displayName.toUpperCase(), 50, canvas.height / 4)
+				ctx.fillText('DOWN ' + name, 50, canvas.height / 4)
 			};
 
 			//const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
