@@ -48,9 +48,11 @@ module.exports = {
 				ctx.fillText('DOWN ' + name, 50, canvas.height / 4);
 			};
 			if (nameWidth > (canvas.width / 2 - 50)) {
-				fitText(name, 'Handwritten', 64, canvas.width / 2 + 25, canvas.height / 1.75);
+				ctx.font = '64px "Handwritten"';
+				fitText(name, 'Handwritten', 64, canvas.width / 2 + 25, canvas.height / 1.6);
 			} else {
-				ctx.fillText(name, canvas.width / 2 + 25, canvas.height / 1.75)
+				ctx.font = '64px "Handwritten"';
+				ctx.fillText(name, canvas.width / 2 + 25, canvas.height / 1.6)
 			}
 
 			//const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
