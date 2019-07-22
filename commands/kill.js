@@ -26,7 +26,7 @@ module.exports = {
 			var canvas;
 
 			var random = Math.random();
-			if (random < 0.1) { 
+			if (random < 0.2) {
 				proceed = false
 
 				const background = await Canvas.loadImage('commands/images/killagain.jpg');
@@ -82,7 +82,7 @@ module.exports = {
 					var name = member.toString().toUpperCase();
 				};
 
-				var downWidth = ctx.measureText('DOWN ' + name).width;
+				var downWidth = ctx.measureText(name + ' DOWN').width;
 				var nameWidth = ctx.measureText(name).width;
 
 				function fitText(text, size, fontface, fontsize, xPos, yPos) {
@@ -93,9 +93,9 @@ module.exports = {
 					ctx.fillText(text, xPos, yPos);
 				}
 				if (downWidth > canvas.width - 100) {
-					fitText('DOWN ' + name, canvas.width - 100, 'Handwritten', 128, 50, canvas.height / 4);
+					fitText(name + ' DOWN', canvas.width - 100, 'Handwritten', 128, 50, canvas.height / 4);
 				} else {
-					ctx.fillText('DOWN ' + name, 50, canvas.height / 4);
+					ctx.fillText(name + ' DOWN', 50, canvas.height / 4);
 				};
 				ctx.font = '64px "Handwritten"';
 				ctx.textAlign = 'center';
