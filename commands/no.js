@@ -20,7 +20,7 @@ module.exports = {
 			const canvas = createCanvas(background.width, background.height);
 			const ctx = canvas.getContext('2d');
 
-			ctx.font = '128px "Handwritten"';
+			ctx.font = '64px "Handwritten"';
 			ctx.fillStyle = '#6b0c19';
 
 			ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -36,7 +36,7 @@ module.exports = {
 				ctx.fillText(text, xPos, yPos);
 			}
 			if (noWidth > canvas.width - 100) {
-				fitText(name + ' NO', canvas.width / 1.5 - 100, 'Handwritten', 128, 50, canvas.height / 4);
+				fitText(name + ' NO', canvas.width / 1.5 - 100, 'Handwritten', 128, 50, canvas.height / 3);
 			} else {
 				ctx.fillText(name + ' NO', 50, canvas.height / 8);
 			};
