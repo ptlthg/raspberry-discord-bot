@@ -49,13 +49,13 @@ module.exports = {
 						ctx.fillText(text, xPos, yPos);
 					}
 					if (nameWidth > canvas.width / 2 - 100) {
-						fitText(name, canvas.width / 2 - 100, 'Handwritten', 128, 50, canvas.height * 0.66);
+						fitText(name, canvas.width / 2 - 100, 'Handwritten', 128, canvas.width / 2 + 50, canvas.height * 0.66);
 					} else {
 						ctx.fillText(name, canvas.width / 2 + 50, canvas.height * 0.66);
 					};
 				} else {
 					ctx.beginPath();
-					ctx.arc(canvas.width / 2 + 150, canvas.height / 2 + 100, 100, 0, Math.PI * 2, true);
+					ctx.arc(canvas.width / 2 + 155, canvas.height / 2 + 75, 125, 0, Math.PI * 2, true);
 					ctx.closePath();
 					ctx.clip();
 
