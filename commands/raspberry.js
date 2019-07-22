@@ -8,7 +8,6 @@ module.exports = {
 			.setColor('red')
 			.setAuthor('Raspberry', 'attachment://icon.png')
 			.setImage('attachment://icon.png')
-			.setTimestamp()
 			.setFooter('Raspberry', 'attachment://icon.png');
 
 		message.channel.send(raspberry);
