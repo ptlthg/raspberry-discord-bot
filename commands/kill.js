@@ -42,7 +42,7 @@ module.exports = {
 						const canvas = createCanvas(background.width, background.height);
 						const ctx = canvas.getContext('2d');
 
-						ctx.font = '128px 'Handwritten'';
+						ctx.font = '128px "Handwritten"';
 						ctx.fillStyle = '#02a166';
 
 						ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -80,7 +80,7 @@ module.exports = {
 				const canvas = createCanvas(background.width, background.height);
 				const ctx = canvas.getContext('2d');
 
-				ctx.font = '128px 'Handwritten'';
+				ctx.font = '128px "Handwritten"';
 				ctx.fillStyle = '#6b0c19';
 
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
