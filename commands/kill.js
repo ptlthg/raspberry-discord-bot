@@ -63,7 +63,7 @@ module.exports = {
 			const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 
 			const newEmbed = new Discord.RichEmbed()
-				.setColor('#0099ff')
+				.setColor('#6b0c19')
 				.setAuthor('Oh boy! Here I go killing again!')
 				.attachFiles([attachment])
 				.setImage('attachment://kill.png')
