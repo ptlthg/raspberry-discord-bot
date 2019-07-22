@@ -30,22 +30,29 @@ module.exports = {
 				var name = member.displayName.toUpperCase();
 			} else {
 				var name = member.toString().toUpperCase();
-			}
-			var textWidth = ctx.measureText(name).width
+			};
 
-			function fitText(text, fontface) {
+			var downWidth = ctx.measureText('DOWN ' + name).width;
+			var nameWidth = ctx.measureText(name).width;
+
+			function fitText(text, fontface, xPos, yPos) {
 				var fontsize = 128;
 				do {
 					fontsize--;
 					ctx.font = fontsize + 'px ' + fontface;
-				} while (ctx.measureText(text).width > canvas.width - 100)
-				ctx.fillText(text, 50, canvas.height /4)
+				} while (ctx.measureText(text).width > canvas.width - 100);
+				ctx.fillText(text, xPos, yPos);
 			}
-			if (textWidth > canvas.width - 100) {
-				fitText('DOWN ' + name, 'Handwritten')
+			if (downWidth > canvas.width - 100) {
+				fitText('DOWN ' + name, 'Handwritten', 50, canvas.height / 4);
 			} else {
-				ctx.fillText('DOWN ' + name, 50, canvas.height / 4)
+				ctx.fillText('DOWN ' + name, 50, canvas.height / 4);
 			};
+			if (nameWidth > (canvas.width / 2 - 50)) {
+				fitText(name, 'Handwritten', 25, canvas.height / 2.5);
+			} else {
+				ctx.fillText(name, 25, canvas.height / 2.5)
+			}
 
 			//const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
 			//ctx.drawImage(avatar, 25, 0, 200, 200);
