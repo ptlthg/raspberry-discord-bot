@@ -6,10 +6,10 @@ module.exports = {
 		const raspberry = new Discord.RichEmbed()
 			.attachFiles(['commands/images/icon.png'])
 			.setColor('red')
-			.setAuthor('Raspberry', 'commands/images/icon.png')
+			.setAuthor('Raspberry', 'attachment://icon.png')
 			.setImage('attachment://icon.png')
 			.setTimestamp()
-			.setFooter('Raspberry', 'commands/images/icon.png');
+			.setFooter('Raspberry', 'attachment://icon.png');
 
 		message.channel.send(raspberry);
 	},
