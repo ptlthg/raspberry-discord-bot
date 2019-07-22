@@ -8,7 +8,7 @@ module.exports = {
 	execute(message, args) {
 			const data = [];
 			const { commands } = message.client;
-			const helpMenu = new Discord.RichEmbed()
+			//const helpMenu = new Discord.RichEmbed()
 			if (!args.length) {
 				helpMenu.title('Here\'s a list of all the commands:')
 
