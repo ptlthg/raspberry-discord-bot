@@ -8,7 +8,7 @@ module.exports = {
 	execute(message, args) {
 		const raspberry = new Discord.RichEmbed()
 			.attachFiles(['commands/images/icon.png'])
-			.setColor('red')
+			.setColor('#6b0c19')
 			.setAuthor('Raspberry', 'attachment://icon.png')
 			.setImage('attachment://icon.png')
 			.setFooter('Raspberry', 'attachment://icon.png');
