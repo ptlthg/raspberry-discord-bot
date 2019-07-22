@@ -41,7 +41,7 @@ module.exports = {
 				if (!state) {
 					var name;
 					for (var i = 0; i < args.length; i++) {
-						if (args[i] !== 'alt') {
+						if (args[i] !== 'alt' && args.length > 1) {
 							name = name + args[i] + ' ';
 						};
 					};
