@@ -6,12 +6,12 @@ module.exports = {
 	execute(message, args) {
 		var member = message.mentions.members.first();
 		if (member !== undefined) {
-			kill(member, true)
+			kill(member, true);
 		} else if (args !== undefined && args !== '' && args !== ' ') {
-			kill(args, false)
+			kill(args, false);
 		} else {
-			message.channel.send('No user specified, going to kill everyone in their sleep now, thanks ' + message.member.displayName + '!')
-		}
+			message.channel.send('No user specified, going to kill everyone in their sleep now, thanks ' + message.member.displayName + '!');
+		};
 		async function kill(victim, state) {
 			member = victim;
 
@@ -47,15 +47,14 @@ module.exports = {
 			} else {
 				ctx.fillText('DOWN ' + name, 50, canvas.height / 4);
 			};
+			ctx.font = '64px "Handwritten"';
+			ctx.textAlign = 'center';
+			ctx.fillStyle = '#02a166';
 			if (nameWidth > (canvas.width / 2 - 50)) {
-				ctx.font = '64px "Handwritten"';
-				ctx.textAlign = 'center';
 				fitText(name, canvas.width / 2 - 50, 'Handwritten', 64, canvas.width * 0.75, canvas.height / 1.6);
 			} else {
-				ctx.font = '64px "Handwritten"';
-				ctx.textAlign = 'center';
-				ctx.fillText(name, canvas.width * 0.75, canvas.height / 1.6)
-			}
+				ctx.fillText(name, canvas.width * 0.75, canvas.height / 1.6);
+			};
 
 			const attachment = new Discord.Attachment(canvas.toBuffer(), 'kill.png');
 

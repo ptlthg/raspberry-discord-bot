@@ -2,7 +2,7 @@ const Canvas = require('canvas');
 const Discord = require('discord.js');
 module.exports = {
 	name: 'no',
-	description: 'Chuck no at someone.',
+	description: 'Chuck \"no\" at someone.',
 	execute(message, args) {
 		var member = message.mentions.members.first();
 		if (member !== undefined) {
