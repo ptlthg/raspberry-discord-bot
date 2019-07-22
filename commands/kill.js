@@ -55,12 +55,15 @@ module.exports = {
 					};
 				} else {
 					ctx.beginPath();
-					ctx.arc(canvas.width / 2 + 155, canvas.height / 2 + 75, 125, 0, Math.PI * 2, true);
+					//Draws circle
+					ctx.arc(canvas.width / 2 + 155, canvas.height / 2 + 125, 125, 0, Math.PI * 2, true);
 					ctx.closePath();
+					//Uses circle as cookie cutter
 					ctx.clip();
 
 					const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-					ctx.drawImage(avatar, canvas.width / 2 + 55, canvas.height / 2, 250, 250);
+					//Draws pfp
+					ctx.drawImage(avatar, canvas.width / 2 + 45, canvas.height / 2, 250, 250);
 				};
 			};
 
