@@ -92,6 +92,7 @@ module.exports = {
 							name = name + args[i] + ' ';
 						};
 					};
+					name = name.slice(0, -1);
 					name = name.toUpperCase();
 				};
 				var downWidth = ctx.measureText(name + ' DOWN').width;
