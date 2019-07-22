@@ -41,8 +41,8 @@ module.exports = {
 
 				const newEmbed = new Discord.RichEmbed()
 					.setColor('#0099ff')
-					.setAuthor(message.author.displayName + ' made me do it.')
-					.attachFiles(['kill.png'])
+					.setAuthor(message.member.displayName + ' made me do it.')
+					.attachFiles([canvas.toBuffer()])
 					.setImage('attachment://kill.png')
 					.setTimestamp()
 					.setFooter('Oh boy! Here I go killing again!');
