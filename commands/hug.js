@@ -37,8 +37,8 @@ module.exports = {
 
 			const newEmbed = new Discord.RichEmbed()
 				.setColor('#6b0c19')
-				.attachFiles([attachment])
-				.setImage('attachment://hug.png')
+				//.attachFiles([attachment])
+				.setImage('commands/images/hug.png')
 				.setTimestamp()
 				.setFooter(message.member.displayName + ' made me do it.');
 
