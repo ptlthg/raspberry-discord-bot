@@ -33,12 +33,12 @@ module.exports = {
 				ctx.drawImage(avatar, canvas.width - 100, 0, 200, 200);
 			}
 
-			const attachment = new Discord.Attachment(canvas.toBuffer(), 'hug.png');
+			const attachment = new Discord.Attachment('commands/images/hug.png', 'hug.png');
 
 			const newEmbed = new Discord.RichEmbed()
 				.setColor('#6b0c19')
-				//.attachFiles([attachment])
-				.setImage('commands/images/hug.png')
+				.attachFiles([attachment])
+				.setImage('attachment://hug.png')
 				.setTimestamp()
 				.setFooter(message.member.displayName + ' made me do it.');
 
