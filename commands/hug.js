@@ -31,9 +31,9 @@ module.exports = {
 
 				const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
 				ctx.drawImage(avatar, canvas.width - 100, 0, 200, 200);
-
-				const attachment = new Discord.Attachment(canvas.toBuffer(), 'hug.png');
 			}
+
+			const attachment = new Discord.Attachment(canvas.toBuffer(), 'hug.png');
 
 			const newEmbed = new Discord.RichEmbed()
 				.setColor('#6b0c19')
