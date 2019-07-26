@@ -25,13 +25,13 @@ module.exports = {
 
 			ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-			/*ctx.beginPath();
-			ctx.arc(canvas.width, 100, 100, 0, Math.PI * 2, true);
+			ctx.beginPath();
+			ctx.arc(canvas.width - 175, 275, 75, 0, Math.PI * 2, true);
 			ctx.closePath();
-			ctx.clip();*/
+			ctx.clip();
 
 			const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-			ctx.drawImage(avatar, canvas.width - 250, 100, 150, 150);
+			ctx.drawImage(avatar, canvas.width - 250, 200, 150, 150);
 
 			const attachment = new Discord.Attachment(canvas.toBuffer(), 'snipe.png');
 
