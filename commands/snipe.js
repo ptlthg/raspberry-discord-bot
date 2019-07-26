@@ -25,10 +25,10 @@ module.exports = {
 
 			ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-			ctx.beginPath();
+			/*ctx.beginPath();
 			ctx.arc(canvas.width, 100, 100, 0, Math.PI * 2, true);
 			ctx.closePath();
-			ctx.clip();
+			ctx.clip();*/
 
 			const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
 			ctx.drawImage(avatar, 100, 100, 200, 200);
