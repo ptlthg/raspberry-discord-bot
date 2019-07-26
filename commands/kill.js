@@ -127,7 +127,6 @@ module.exports = {
 				.setAuthor('Oh boy! Here I go killing again!')
 				.attachFiles([attachment])
 				.setImage('attachment://kill.png')
-				.setTimestamp()
 				.setFooter(message.member.displayName + ' made me do it.');
 
 			message.channel.send(newEmbed);
