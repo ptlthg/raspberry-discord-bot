@@ -31,7 +31,7 @@ module.exports = {
 			ctx.clip();
 
 			const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-			ctx.drawImage(avatar, 0, 100, 200, 200);
+			ctx.drawImage(avatar, 100, 100, 200, 200);
 
 			const attachment = new Discord.Attachment(canvas.toBuffer(), 'snipe.png');
 
