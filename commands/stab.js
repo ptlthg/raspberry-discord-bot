@@ -19,7 +19,7 @@ module.exports = {
 
 			const { createCanvas } = require('canvas');
 
-			const background = await Canvas.loadImage('commands/images/stab.jpg');
+			const background = await Canvas.loadImage('commands/images/stab.png');
 			const canvas = createCanvas(background.width, background.height);
 			const ctx = canvas.getContext('2d');
 
