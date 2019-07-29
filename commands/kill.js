@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 module.exports = {
 	name: 'kill',
-	aliases: ['k', 'murder', 'stab', 'shank', 'stan'],
+	aliases: ['k', 'murder', 'shank', 'stan'],
 	description: 'Kill a user',
 	args: true,
 	usage: '(alt) <user> or any name',
