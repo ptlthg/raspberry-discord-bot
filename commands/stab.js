@@ -26,12 +26,12 @@ module.exports = {
 			ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
 			ctx.beginPath();
-			ctx.arc(canvas.width - 125, canvas.height / 6 + 75, 75, 0, Math.PI * 2, true);
+			ctx.arc(canvas.width - 110, canvas.height / 7 + 75, 75, 0, Math.PI * 2, true);
 			ctx.closePath();
 			ctx.clip();
 
 			const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-			ctx.drawImage(avatar, canvas.width - 200, canvas.height / 6, 150, 150);
+			ctx.drawImage(avatar, canvas.width - 185, canvas.height / 7, 150, 150);
 
 			const attachment = new Discord.Attachment(canvas.toBuffer(), 'stab.png');
 
