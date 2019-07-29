@@ -31,7 +31,7 @@ module.exports = {
 			ctx.clip();*/
 
 			const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-			ctx.drawImage(avatar, canvas.width - 150, canvas.height / 2, 150, 150);
+			ctx.drawImage(avatar, canvas.width - 200, canvas.height / 3, 150, 150);
 
 			const attachment = new Discord.Attachment(canvas.toBuffer(), 'stab.png');
 
