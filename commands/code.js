@@ -41,6 +41,7 @@ module.exports = {
 				getNext();
 			}
 		};
+		getNext();
 
 		if (hint === '') {
 			message.channel.send('Error');
