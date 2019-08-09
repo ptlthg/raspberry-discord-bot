@@ -18,22 +18,22 @@ module.exports = {
 			const stage = await storage.get('stage');
 			console.log(stage);
 				switch (stage) {
-					case 1:
+					case '1':
 					console.log('1');
 						hint = 'Caesar fell down five stairs'
 						code = 'HOH0DYZtHuZsDYDsHOHsDYZtHuDbHeZsIXVsHOZsHOZtDYZuHuZbHODsHODsDYDtHODsDYZuHeZsDYZtHeZtDYZsHuDsDYDuHeZbSB4bHYZrDYVsHYZrDYVsHYZrDYVsHYZbHYZrHNVrHOVsHYZrDYVsHYZbHYZrHOVsDYVsHYZrDYVsHYZrDYVsHYZrDYVsHYZrDYVsHYZ='
 						break;
-					case 2:
+					case '2':
 					console.log('2');
 						break;
-					case 3:
+					case '3':
 					console.log('3');
 						break;
-					case 4:
+					case '4':
 					console.log('4');
 						break;
 					default:
-					storage.set('stage', 0);
+					storage.set('stage', '0');
 					console.log('It has started');
 					getNext();
 						break;
