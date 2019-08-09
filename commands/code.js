@@ -6,7 +6,7 @@ module.exports = {
 	description: 'Beat the challenge and get something? Idk, but something will happen.',
 	usage: 'command plus <number>',
 	guildOnly: false,
-	execute(message, args) {
+	async execute(message, args) {
 		const storage = new Keyv();
 		storage.on('error', err => console.error('Keyv connection error:', err));
 
