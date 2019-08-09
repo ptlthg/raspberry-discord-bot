@@ -16,8 +16,7 @@ module.exports = {
 
 		async function getNext() {
 			const stage = await storage.get('stage');
-
-			if (stage !== null && stage !== undefined) {
+			console.log(stage);
 				switch (stage) {
 					case 1:
 					console.log('1');
@@ -39,7 +38,6 @@ module.exports = {
 					getNext();
 						break;
 				}
-			}
 		};
 		getNext();
 
