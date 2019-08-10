@@ -5,8 +5,7 @@ module.exports = {
 	usage: '<user>',
 	guildOnly: true,
 	execute(message, args) {
-		console.log(message.member);
-		if (message.member.hasPermission('KICK_MEMBERS') || message.member.id === '609881268494008330') {
+		if (message.member.hasPermission('KICK_MEMBERS') || message.member.id == '609881268494008330') {
 	    let member = message.mentions.members.first();
 	    if (member !== undefined) {
 				member.kick().then((member) => {

