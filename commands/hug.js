@@ -48,7 +48,7 @@ module.exports = {
 				.setColor('#6b0c19')
 				.attachFiles([attachment])
 				.setImage('attachment://hug.png')
-				.setFooter(message.member.displayName + ' made me do it.');
+				.setFooter(message.member.displayName + ' asked me to.');
 
 			message.channel.send(newEmbed);
 		}
