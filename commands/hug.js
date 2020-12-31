@@ -36,6 +36,8 @@ module.exports = {
 
 				const foreground = await Canvas.loadImage('commands/images/hugarms.png');
 				ctx.drawImage(foreground, 0, 0, canvas.width, canvas.height);
+
+				const attachment = new Discord.Attachment(canvas.toBuffer(), 'hug.png');
 			} else {
 				const attachment = new Discord.Attachment('commands/images/hug.png', 'hug.png');
 			}
