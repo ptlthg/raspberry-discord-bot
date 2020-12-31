@@ -33,11 +33,11 @@ module.exports = {
 				ctx.clip();
 
 				const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-				ctx.drawImage(avatar, 32, 80, 64, 64);
+				ctx.drawImage(avatar, 32, 32, 64, 64);
 				ctx.restore();
 
 				const foreground = await Canvas.loadImage('commands/images/hugarms.png');
-				ctx.drawImage(foreground, 0, 0, canvas.width, canvas.height);
+				ctx.drawImage(foreground, 0, 10, canvas.width, canvas.height);
 
 				 attachment = new Discord.Attachment(canvas.toBuffer(), 'hug.png');
 			} else {
