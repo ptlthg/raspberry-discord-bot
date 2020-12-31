@@ -38,17 +38,25 @@ module.exports = {
 				ctx.drawImage(foreground, 0, 0, canvas.width, canvas.height);
 
 				const attachment = new Discord.Attachment(canvas.toBuffer(), 'hug.png');
+
+				const newEmbed = new Discord.RichEmbed()
+					.setColor('#6b0c19')
+					.attachFiles([attachment])
+					.setImage('attachment://hug.png')
+					.setFooter(message.member.displayName + ' made me do it.');
+
+				message.channel.send(newEmbed);
 			} else {
 				const attachment = new Discord.Attachment('commands/images/hug.png', 'hug.png');
+
+				const newEmbed = new Discord.RichEmbed()
+					.setColor('#6b0c19')
+					.attachFiles([attachment])
+					.setImage('attachment://hug.png')
+					.setFooter(message.member.displayName + ' made me do it.');
+
+				message.channel.send(newEmbed);
 			}
-
-			const newEmbed = new Discord.RichEmbed()
-				.setColor('#6b0c19')
-				.attachFiles([attachment])
-				.setImage('attachment://hug.png')
-				.setFooter(message.member.displayName + ' made me do it.');
-
-			message.channel.send(newEmbed);
 		}
 	},
 };
