@@ -28,16 +28,16 @@ module.exports = {
 
 				ctx.save();
 				ctx.beginPath();
-				ctx.arc(canvas.width, 32, 72, 0, Math.PI * 2, true);
+				ctx.arc(canvas.width, args[2], args[3], args[4], Math.PI * 2, true);
 				ctx.closePath();
 				ctx.clip();
 
 				const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-				ctx.drawImage(avatar, 16, 32, 64, 64);
+				ctx.drawImage(avatar, args[5], args[6], agrs[7], args[8]);
 				ctx.restore();
 
 				const foreground = await Canvas.loadImage('commands/images/hugarms.png');
-				ctx.drawImage(foreground, 0, 7, canvas.width, canvas.height);
+				ctx.drawImage(foreground, 0, args[9], canvas.width, canvas.height);
 
 				 attachment = new Discord.Attachment(canvas.toBuffer(), 'hug.png');
 			} else {
