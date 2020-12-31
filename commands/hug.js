@@ -33,7 +33,7 @@ module.exports = {
 				ctx.clip();
 
 				const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-				ctx.drawImage(avatar, 32, 32, 64, 64);
+				ctx.drawImage(avatar, 16, 32, 64, 64);
 				ctx.restore();
 
 				const foreground = await Canvas.loadImage('commands/images/hugarms.png');
