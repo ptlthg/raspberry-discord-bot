@@ -28,12 +28,12 @@ module.exports = {
 
 				ctx.save();
 				ctx.beginPath();
-				ctx.arc(parseInt(args[1]), parseInt(args[2]), parseInt(args[3]), 0, Math.PI * 2, true);
+				ctx.arc(64, 106, 32, 0, Math.PI * 2, true);
 				ctx.closePath();
 				ctx.clip();
 
 				const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-				ctx.drawImage(avatar, parseInt(args[4]), parseInt(args[5]), parseInt(args[6]), parseInt(args[7]));
+				ctx.drawImage(avatar, 32, 74, 64, 64);
 				ctx.restore();
 
 				const foreground = await Canvas.loadImage('commands/images/hugarms.png');
