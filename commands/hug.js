@@ -9,7 +9,7 @@ module.exports = {
 	execute(message, args) {
 		var member = message.mentions.members.first();
 		if (member !== undefined) {
-			hug(member, false/*true*/)
+			hug(member, true)
 		} else {
 			hug(member, false)
 		}
@@ -18,22 +18,27 @@ module.exports = {
 
 			const { createCanvas } = require('canvas');
 
-			const background = await Canvas.loadImage('commands/images/hug.png');
-			const canvas = createCanvas(background.width, background.height);
-			const ctx = canvas.getContext('2d');
+			
 			if (state) {
+				const background = await Canvas.loadImage('commands/images/hugbase.png');
+				const canvas = createCanvas(background.width, background.height);
+				const ctx = canvas.getContext('2d');
+
 				ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
 				ctx.beginPath();
-				ctx.arc(canvas.width, 100, 100, 0, Math.PI * 2, true);
+				ctx.arc(canvas.width, 64, 64, 0, Math.PI * 2, true);
 				ctx.closePath();
 				ctx.clip();
 
 				const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
-				ctx.drawImage(avatar, canvas.width - 100, 0, 200, 200);
-			}
+				ctx.drawImage(avatar, canvas.width - 100, 0, 64, 64);
 
-			const attachment = new Discord.Attachment('commands/images/hug.png', 'hug.png');
+				const foreground = await Canvas.loadImage('commands/images/hugarms.png');
+				ctx.drawImage(foreground, 0, 0, canvas.width, canvas.height);
+			} else {
+				const attachment = new Discord.Attachment('commands/images/hug.png', 'hug.png');
+			}
 
 			const newEmbed = new Discord.RichEmbed()
 				.setColor('#6b0c19')
