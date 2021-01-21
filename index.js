@@ -36,7 +36,7 @@ client.on('message', async (message) => {
 		} else if (random < 0.3) {
 			message = 'Weird that you\'re even trying';
 		} else if (random < 0.45) {
-			message = `Why am I even hosting this for you ${message.author.username}?`;
+			message = `Why am I even hosting this for you?`;
 		} else if (random < 0.6) {
 			message = 'Read the room next time';
 		} else if (random < 0.75) {
