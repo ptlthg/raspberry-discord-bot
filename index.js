@@ -46,7 +46,7 @@ client.on('message', async (message) => {
 		} else {
 			message = 'You can\'t possibly expect to create a good community while actively banning people who\'ve annoyed you.';
 		}
-		message.channel.send(message);
+		return message.channel.send(message);
 	}
 
 	if (command.guildOnly && message.channel.type !== 'text') {
