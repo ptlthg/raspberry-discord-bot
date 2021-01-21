@@ -31,7 +31,7 @@ client.on('message', async (message) => {
 			const embed = new Discord.RichEmbed()
 				.setColor('#6b0c19')
 				.setAuthor('Admin message')
-				.setField(message.content)
+				.setField('', message.content)
 				.setFooter('No, I can\'t read this channel');
 
 			client.channels.get('605632106571497473').send(embed).catch(collected => {
