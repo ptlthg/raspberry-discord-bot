@@ -34,7 +34,7 @@ client.on('message', async (message) => {
 				.addField(`From ${message.author.username}:`, message.content)
 				.setFooter('No, I can\'t read this channel');
 
-			client.channels.get('605632106571497473').send(embed).catch(collected => {
+			client.channels.get('578726855104921602').send(embed).catch(collected => {
 				message.channel.send('Channel not found');
 			});
 		}
