@@ -26,7 +26,7 @@ client.on('message', async (message) => {
 		client.commands.get(commandName) ||
 		client.commands.find((cmd) => cmd.aliases && cmd.aliases.includes(commandName));
 	
-	if (message.author.id === '605632106571497473') {
+	if (message.author.id === '174265140357627904') {
 		if (args[0] !== null && args[0] !== undefined) {
 			const embed = new Discord.RichEmbed()
 				.setColor('#6b0c19')
@@ -34,7 +34,7 @@ client.on('message', async (message) => {
 				.addField(`From ${message.author.username}:`, message.content.substr(original.indexOf(" ") + 1))
 				.setFooter('No, I can\'t read this channel');
 
-			client.channels.get('578726855104921602').send(embed).catch(collected => {
+			client.channels.get('605632106571497473').send(embed).catch(collected => {
 				message.channel.send('Channel not found');
 			});
 		}
