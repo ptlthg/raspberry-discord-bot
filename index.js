@@ -44,9 +44,23 @@ client.on('message', async (message) => {
 		} else if (random < 0.9) {
 			data = `Sorry I bet you totally wanted to use the ${command.name} command huh`;
 		} else {
-			data = 'You can\'t possibly expect to create a good community while actively banning people who\'ve annoyed you.';
+			data = 'You can\'t possibly expect to create a good community while actively banning people who make it up.';
 		}
 		return message.channel.send(data);
+	}
+
+	if (message.author.id === '174265140357627904') {
+		if (args[0] !== null && args[0] !== undefined) {
+			const embed = new Discord.RichEmbed()
+				.setColor('#6b0c19')
+				.setAuthor('Admin message')
+				.setField(args[0])
+				.setFooter('No, I can\'t read this channel');
+
+			client.channels.get('605632106571497473').send(embed).catch(collected => {
+				message.channel.send('Channel not found');
+			});
+		}
 	}
 
 	if (command.guildOnly && message.channel.type !== 'text') {
