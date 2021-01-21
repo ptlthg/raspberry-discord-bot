@@ -28,7 +28,7 @@ client.on('message', async (message) => {
 
 	if (!command) return;
 	
-	if (message.author.id === '315455612505030657' || message.author.id === '174265140357627904') {
+	if (message.author.id === '315455612505030657') {
 		var random = Math.random();
 		let data = 'You really shouldn\'t be able to see this message, but it wouldn\'t suprise me if you broke this again';
 		if (random < 0.15) {

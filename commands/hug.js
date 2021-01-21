@@ -19,7 +19,6 @@ module.exports = {
 			const { createCanvas } = require('canvas');
 			var attachment;
 			
-			
 			if (state) {
 				const background = await Canvas.loadImage('commands/images/hugbase.png');
 				const canvas = createCanvas(background.width, background.height);
@@ -33,7 +32,9 @@ module.exports = {
 				ctx.closePath();
 				ctx.clip();
 
-				const avatar = await Canvas.loadImage(member.user.displayAvatarURL);
+				const avatar = await Canvas.loadImage(member.user.displayAvatarURL).catch(collected => {
+					return message.reply('For some reason I can\'t load this person\'s profile picture!');
+				});
 				ctx.drawImage(avatar, 32, 74, 64, 64);
 				ctx.restore();
 
