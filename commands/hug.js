@@ -19,6 +19,7 @@ module.exports = {
 			const { createCanvas } = require('canvas');
 			var attachment;
 			
+			
 			if (state) {
 				const background = await Canvas.loadImage('commands/images/hugbase.png');
 				const canvas = createCanvas(background.width, background.height);

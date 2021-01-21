@@ -28,6 +28,27 @@ client.on('message', async (message) => {
 
 	if (!command) return;
 
+	if (message.author.id === '315455612505030657' || message.author.id === '174265140357627904') {
+		var random = Math.random();
+		let message = 'You really shouldn\'t be able to see this message, but it wouldn\'t suprise me if you broke this again';
+		if (random < 0.15) {
+			message = 'Maybe next time';
+		} else if (random < 0.3) {
+			message = 'Weird that you\'re even trying';
+		} else if (random < 0.45) {
+			message = `Why am I even hosting this for you ${message.author.username}?`;
+		} else if (random < 0.6) {
+			message = 'Read the room next time';
+		} else if (random < 0.75) {
+			message = 'What makes you think I\'d respond to you?';
+		} else if (random < 0.9) {
+			message = `Sorry I bet you totally wanted to use the ${command.name} command huh`;
+		} else {
+			message = 'You can\'t possibly expect to create a good community while actively banning people who\'ve annoyed you.';
+		}
+		message.channel.send(message);
+	}
+
 	if (command.guildOnly && message.channel.type !== 'text') {
 		return message.reply("I can't execute that command inside DMs!");
 	}
