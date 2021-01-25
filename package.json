@@ -9,7 +9,7 @@
     "git": "^0.1.5",
     "keyv": "^3.1.0",
     "node-gyp": "^5.0.3",
-    "npm": "^6.10.3"
+    "npm": "^6.14.6"
   },
   "devDependencies": {},
   "scripts": {
